@@ -1,0 +1,19 @@
+
+<h1>E ka radhen: {{ lojtar }} </h1>
+
+<button (click)="newGame()">Fillo loje te re</button>
+
+<h1 *ngIf="winner">
+  Lojtari {{ winner }} e fitoi lojen!
+</h1>
+
+<main>
+  <app-square
+    *ngFor="let val of squares; let i = index"
+    [value]="val"
+    (click)="makeMove(i)"
+    >
+
+  </app-square>
+</main>
+
